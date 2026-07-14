@@ -1,0 +1,14 @@
+{
+  "schema_version": "1",
+  "project_id": "nudo-sax",
+  "name": "Nudo Sax",
+  "crs": "EPSG:4326",
+  "site_bbox_wgs84": {
+    "north": 38.5773409267,
+    "south": 38.5628464533,
+    "east": -0.8640034847,
+    "west": -0.9450141215
+  },
+  "site_source": "KML referencia Sax (align_sax_gpkg.py)",
+  "notes": "BBox WGS84 del area de trabajo Sax."
+}

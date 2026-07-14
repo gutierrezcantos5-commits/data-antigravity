@@ -1,0 +1,17 @@
+{
+  "name": "ortofoto_rapida",
+  "description": "Solo ortofoto, menor tiempo y disco. Revisar en campo antes de entrega final.",
+  "profile": "engineering",
+  "options": [
+    {"name": "fast-orthophoto", "value": "true"},
+    {"name": "skip-3dmodel", "value": "true"},
+    {"name": "skip-report", "value": "true"},
+    {"name": "orthophoto-resolution", "value": "5"},
+    {"name": "feature-quality", "value": "medium"},
+    {"name": "max-concurrency", "value": "16"},
+    {"name": "optimize-disk-space", "value": "true"},
+    {"name": "orthophoto-kmz", "value": "true"},
+    {"name": "cog", "value": "true"},
+    {"name": "end-with", "value": "odm_postprocess"}
+  ]
+}

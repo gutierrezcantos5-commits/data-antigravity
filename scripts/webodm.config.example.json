@@ -1,0 +1,7 @@
+{
+  "url": "http://localhost:8000",
+  "exportRoot": "D:\\Proyectos\\Ortofotos",
+  "nodeCount": 1,
+  "minExportSizeBytes": 1048576,
+  "assets": ["orthophoto.tif", "dsm.tif"]
+}

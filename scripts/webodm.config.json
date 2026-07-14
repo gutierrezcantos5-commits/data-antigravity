@@ -1,0 +1,9 @@
+{
+  "url": "http://localhost:8000",
+  "exportRoot": "G:\\Mi unidad\\almacen OpenAntigravity\\ORTOFOTOS WebODM",
+  "nodeCount": 1,
+  "minExportSizeBytes": 1048576,
+  "assets": ["orthophoto.tif", "dsm.tif"],
+  "defaultPreset": "ortofoto_ingenieria",
+  "presetsDir": "opengravity/runtime/webodm/presets"
+}

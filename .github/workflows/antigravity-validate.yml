@@ -1,0 +1,32 @@
+name: Antigravity Validate
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  validate-ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: pip install pytest openpyxl
+
+      - name: Validate task ledger (schema-only)
+        run: python scripts/ci_validate_tasks.py
+
+      - name: Engineering evals (CI)
+        run: pytest tests/evals -m ci -v
+
+      - name: Preflight smoke (stdlib)
+        run: python scripts/preflight_task.py engineering --semantic --top 1

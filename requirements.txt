@@ -1,0 +1,37 @@
+# Core Engineering & Data
+pandas
+numpy
+geopandas
+shapely
+pyproj
+pillow
+simplekml
+
+# Agent Dashboard & UI
+streamlit
+ollama
+
+# PLC & Industrial
+pyModbusTCP
+
+# Excel & Documents
+openpyxl
+pdf-parse
+dxfgrabber
+
+# Tests / evals
+pytest
+
+# Utils
+python-dotenv
+requests
+
+# MCP servers (local Cursor)
+# mcp
+# fastmcp
+
+# Optional: semantic memory search (pip install sentence-transformers)
+# sentence-transformers
+
+# Optional: ChromaDB persistent memory (MCP chroma + index_memory_chroma.py)
+# chromadb

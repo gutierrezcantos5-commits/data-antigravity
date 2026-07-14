@@ -1,0 +1,14 @@
+{
+  "schema_version": "1",
+  "project_id": "colectora-valle",
+  "name": "Colectora Valle",
+  "crs": "EPSG:4326",
+  "site_bbox_wgs84": {
+    "north": 38.57054136047572,
+    "south": 38.56789082514367,
+    "east": -0.9436152086616192,
+    "west": -0.9490483279219283
+  },
+  "site_source": "KMZ referencia: Colectora Valle 2026 Febrero.kmz",
+  "notes": "BBox del emplazamiento / ortofoto de referencia en Villena, Alicante."
+}

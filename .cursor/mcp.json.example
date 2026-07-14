@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "chroma": {
+      "command": "uvx",
+      "args": [
+        "chroma-mcp",
+        "--client-type",
+        "persistent",
+        "--data-dir",
+        "C:/Users/gutie/Desktop/DATA Antigravity/opengravity/runtime/memory/chroma_data"
+      ],
+      "cwd": "C:/Users/gutie/Desktop/DATA Antigravity"
+    },
+    "docling": {
+      "command": "uvx",
+      "args": [
+        "--from=docling-mcp[local]",
+        "docling-mcp-server",
+        "--transport",
+        "stdio",
+        "conversion"
+      ],
+      "env": {
+        "DOCLING_CONVERSION_MODE": "local"
+      },
+      "cwd": "C:/Users/gutie/Desktop/DATA Antigravity"
+    },
+    "antigravity-bridge": {
+      "command": "python",
+      "args": [
+        "antigravity_mcp_bridge.py"
+      ],
+      "cwd": "C:/Users/gutie/Desktop/DATA Antigravity"
+    }
+  }
+}

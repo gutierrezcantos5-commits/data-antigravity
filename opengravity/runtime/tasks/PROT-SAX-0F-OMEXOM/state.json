@@ -1,0 +1,76 @@
+{
+  "task_id": "PROT-SAX-0F-OMEXOM",
+  "title": "Nudo Sax — Revisión Propiedad + PDF anotado (SAX-SET-ME-O-0016 Rev. 0F)",
+  "profile": "engineering",
+  "status": "done",
+  "created_at": "2026-07-13",
+  "updated_at": "2026-07-14",
+  "goal": "Validar la última memoria de protecciones de Nudo Sax (Rev. 0F) ya comentada por OMEXOM y dejar entregables trazables (md + PDF anotado).",
+  "scope": {
+    "in_scope": [
+      "Extraer comentarios de la hoja RCC comentada",
+      "Generar informe de revisión Propiedad (md)",
+      "Generar PDF anotado con marcas COM (ancla por páginas RCC)"
+    ],
+    "out_of_scope": [
+      "Recalcular ajustes en SEL (responsabilidad OMEXOM/SEL)"
+    ]
+  },
+  "inputs": {
+    "files": [
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\estudio coordinacion protecciones\\nudo sax\\SAX-SET-ME-O-0016-0F_Memoria de Cálculo. Estudio de Coordinación de Protecciones.pdf",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\estudio coordinacion protecciones\\nudo sax\\SAX-SET-ME-O-0016.0D_Memoria de Cáclulo. Estudio de Coordinación de Protecciones_REC_LC.comentado_Jagc.xlsx",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\estudio coordinacion protecciones\\nudo sax\\SAX_RRCC_COMENTADO.xlsx",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\estudio coordinacion protecciones\\nudo sax\\_extract_sax_rcc.txt"
+    ],
+    "links": [],
+    "notes": "RCC comentado Jagc (Rev. OMEXOM 02/04 + Propiedad 03). Memoria Rev. 0F PDF."
+  },
+  "assumptions": [
+    "Las páginas en columna C4 del RCC referencian páginas de la memoria (1-based) y se usan como ancla para la marca COM."
+  ],
+  "decisions": [
+    {
+      "date": "2026-07-14",
+      "decision": "Veredicto RCC comentado Jagc + memoria 0F: REC — solicitar Rev. 0G.",
+      "why": "6 COM abiertos: COM-1/4 (67N Sax–Valle), COM-5 (68 sin nota), COM-6 (50BF/2º armónico 87T), COM-7 (87L simetría Valle), COM-11 (FAT AT1 no aplicado en tablas)."
+    }
+  ],
+  "deliverables": {
+    "expected": [
+      "Informe md Propiedad (detalle por COM)",
+      "PDF anotado con marcas COM Propiedad",
+      "Excel RCC con Revision 05 Comentarios Propiedad (OK o comentario)"
+    ],
+    "produced": [
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\estudio coordinacion protecciones\\nudo sax\\REVISION_Propiedad_SAX_0F_14072026.md",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\estudio coordinacion protecciones\\nudo sax\\SAX-SET-ME-O-0016_0F_COM_Propiedad_14072026.pdf",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\estudio coordinacion protecciones\\nudo sax\\SAX-SET-ME-O-0016.0D_RCC_Rev05_Propiedad_14072026.xlsx"
+    ]
+  },
+  "validation": {
+    "required": true,
+    "checks": [
+      "python scripts/validate_deliverables.py --engineering-folder \"...\\nudo sax\""
+    ],
+    "evidence": [
+      "Validación OK (PDF memoria + PDF anotado + RCC xlsx presentes y no vacíos)."
+    ],
+    "last_run": "2026-07-14T11:44:58Z",
+    "last_result": "passed",
+    "incidents_file": "incidents.json"
+  },
+  "geo_link": {
+    "manifest": "opengravity/runtime/geo/nudo_sax.geo.json",
+    "orthophoto_file": "",
+    "notes": "Completar orthophoto_file con KMZ/GeoTIFF exportado de WebODM"
+  },
+  "tests_run": [],
+  "next_actions": [
+    "Si se emite Rev. 0G: exigir evidencia en memoria de los puntos abiertos (por COM) y coherencia con Valle cuando aplique."
+  ],
+  "supervisor": {
+    "last_validation": "2026-07-14T11:44:58Z",
+    "open_incidents": 0
+  }
+}

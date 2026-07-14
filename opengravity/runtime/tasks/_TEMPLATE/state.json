@@ -1,0 +1,53 @@
+{
+  "task_id": "TEMPLATE",
+  "title": "",
+  "profile": "engineering|software",
+  "status": "pending",
+  "created_at": "",
+  "updated_at": "",
+  "goal": "",
+  "scope": {
+    "in_scope": [],
+    "out_of_scope": []
+  },
+  "inputs": {
+    "files": [],
+    "links": [],
+    "notes": ""
+  },
+  "assumptions": [],
+  "decisions": [],
+  "evidence_map": {
+    "notes": "Para protecciones: COM -> paginas -> settings/contradicciones",
+    "items": []
+  },
+  "deliverables": {
+    "expected": [],
+    "produced": []
+  },
+  "validation": {
+    "required": false,
+    "checks": [],
+    "evidence": [],
+    "last_run": null,
+    "last_result": null,
+    "incidents_file": "incidents.json"
+  },
+  "supervisor": {
+    "read_prior_incidents": true,
+    "last_validation": null,
+    "open_incidents": 0
+  },
+  "memory": {
+    "consult_before_start": true,
+    "lessons_applied": []
+  },
+  "geo_link": {
+    "manifest": "",
+    "orthophoto_file": "",
+    "notes": "Manifiesto en opengravity/runtime/geo/"
+  },
+  "tests_run": [],
+  "next_actions": []
+}
+

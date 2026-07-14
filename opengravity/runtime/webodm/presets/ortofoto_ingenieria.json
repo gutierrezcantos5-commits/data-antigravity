@@ -1,0 +1,28 @@
+{
+  "name": "ortofoto_ingenieria",
+  "description": "Ortofoto + DSM para superposicion con planos (Colectora Valle, Nudo Sax). GPS drone, calidad alta.",
+  "profile": "engineering",
+  "options": [
+    {"name": "dsm", "value": "true"},
+    {"name": "dtm", "value": "false"},
+    {"name": "orthophoto-resolution", "value": "2"},
+    {"name": "dem-resolution", "value": "5"},
+    {"name": "feature-quality", "value": "high"},
+    {"name": "feature-type", "value": "dspsift"},
+    {"name": "matcher-type", "value": "flann"},
+    {"name": "sfm-algorithm", "value": "triangulation"},
+    {"name": "max-concurrency", "value": "16"},
+    {"name": "orthophoto-kmz", "value": "true"},
+    {"name": "cog", "value": "true"},
+    {"name": "build-overviews", "value": "true"},
+    {"name": "optimize-disk-space", "value": "true"},
+    {"name": "skip-report", "value": "true"},
+    {"name": "skip-3dmodel", "value": "false"},
+    {"name": "skip-orthophoto", "value": "false"},
+    {"name": "fast-orthophoto", "value": "false"},
+    {"name": "pc-quality", "value": "medium"},
+    {"name": "crop", "value": "3"},
+    {"name": "gps-accuracy", "value": "3"},
+    {"name": "end-with", "value": "odm_postprocess"}
+  ]
+}

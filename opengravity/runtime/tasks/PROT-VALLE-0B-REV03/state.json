@@ -1,0 +1,104 @@
+{
+  "task_id": "PROT-VALLE-0B-REV03",
+  "title": "Colectora Valle — Respuesta Propiedad Rev.03 (VCO-SET-ME-O-0016 Rev. 0B)",
+  "profile": "engineering",
+  "status": "done",
+  "created_at": "2026-07-13",
+  "updated_at": "2026-07-13",
+  "goal": "Revisar memoria 0B + RCC + respuestas OMEXOM/SEL y emitir respuesta como Ingeniería de la Propiedad (Rev.03) con entregables trazables.",
+  "scope": {
+    "in_scope": [
+      "Cruce de evidencias (PDF/Excel/Word) y contradicciones",
+      "Redacción de respuestas Rev.03 por COM (julio)",
+      "Generación Excel Rev.03 Propiedad",
+      "Generación PDF anotado con marcas COM"
+    ],
+    "out_of_scope": [
+      "Recalcular ajustes en SEL (responsabilidad OMEXOM/SEL)",
+      "Modificar memorias de terceros"
+    ]
+  },
+  "inputs": {
+    "files": [
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\Colectora Valle\\estudio protecciones julio\\VCO-SET-ME-O-0016.0B Memoria de Cálculo. Estudio de Coordinación de Protecciones (2).pdf",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\Colectora Valle\\estudio protecciones julio\\VCO-SET-ME-O-0016.0A Memoria de Cálculo. Estudio de Coordinación de Protecciones_RCC_7223.xlsx",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\Colectora Valle\\estudio protecciones julio\\Respuestas a comentarios REPSOL_0347.docx"
+    ],
+    "links": [],
+    "notes": "Revisión basada en evidencias extraídas del PDF (settings) y contestación OMEXOM en RCC."
+  },
+  "assumptions": [],
+  "decisions": [
+    {
+      "date": "2026-07-13",
+      "decision": "Veredicto global: REC — no aprobado; solicitar Rev. 0C.",
+      "why": "Persisten puntos críticos sin evidencia/corrección: 67N L14, E79=Y, HEPRZ1/Group2, impedancias no unificadas."
+    }
+  ],
+  "evidence_map": {
+    "notes": "Evidencias clave verificadas directamente en PDF 0B.",
+    "items": [
+      {
+        "id": "COM-01",
+        "status": "Abierto",
+        "evidence": [
+          "PDF p. 52: 51P01=300 A; 51TD01=5,9 (sin cambio)",
+          "RCC: contestación OMEXOM no cierra coordinación"
+        ]
+      },
+      {
+        "id": "COM-11",
+        "status": "Abierto",
+        "evidence": [
+          "PDF p. 49: E79 = Y (contradice 'bloqueado')"
+        ]
+      },
+      {
+        "id": "COM-03/05/06",
+        "status": "Abierto/Parcial",
+        "evidence": [
+          "PDF Tabla 14: HEPRZ1 renombrado pero parámetros secuencia cero heredados (RH5Z1)",
+          "PDF SEL-751 Villena: solo SS1/Group 1; falta Group 2"
+        ]
+      }
+    ]
+  },
+  "deliverables": {
+    "expected": [
+      "Excel RCC con Rev.03 Propiedad",
+      "PDF memoria 0B anotado con marcas COM Rev.03",
+      "Informe de revisión (md) para trazabilidad interna"
+    ],
+    "produced": [
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\Colectora Valle\\estudio protecciones julio\\VCO-SET-ME-O-0016.0B - Hoja Revision VALLE Rev03_Propiedad.xlsx",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\Colectora Valle\\estudio protecciones julio\\VCO-SET-ME-O-0016.0B_Memoria_COM_REV03_12072026.pdf",
+      "C:\\Users\\gutie\\Desktop\\DATA Antigravity\\Proyectos\\Colectora Valle\\estudio protecciones julio\\REVISION_Propiedad_Valle_0B_Rev03.md"
+    ]
+  },
+  "validation": {
+    "required": true,
+    "checks": [
+      "scripts/validate_deliverables.py --engineering-folder <folder>"
+    ],
+    "evidence": [
+      "Validación OK sobre carpeta: Proyectos/Colectora Valle/estudio protecciones julio"
+    ],
+    "last_run": "2026-07-13T21:58:20Z",
+    "last_result": "passed",
+    "incidents_file": "incidents.json"
+  },
+  "geo_link": {
+    "manifest": "opengravity/runtime/geo/colectora_valle.geo.json",
+    "orthophoto_file": "G:\\Mi unidad\\almacen OpenAntigravity\\COLECTORA VALLE\\Colectora Valle\\Calidad\\ortofotos\\Colectora Valle 2026 Febrero.kmz",
+    "notes": "Validacion cruzada: emplazamiento vs ortofoto febrero 2026"
+  },
+  "tests_run": [],
+  "next_actions": [
+    "Enviar a OMEXOM/SEL: Excel Rev03 + PDF anotado + veredicto REC solicitando Rev. 0C",
+    "Pedir a OMEXOM/SEL: Rev. 0C con 67N L14 recalculado, E79 coherente, HEPRZ1 correcto y Group 2 restaurado"
+  ],
+  "supervisor": {
+    "last_validation": "2026-07-13T21:58:20Z",
+    "open_incidents": 0
+  }
+}

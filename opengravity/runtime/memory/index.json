@@ -1,0 +1,76 @@
+{
+  "schema_version": "1",
+  "updated_at": "2026-07-13",
+  "lessons": [
+    {
+      "id": "MEM-001",
+      "domain": "excel",
+      "profile": "engineering",
+      "error_codes": ["XLSX_RCC_MISSING"],
+      "task_id": "PROT-VALLE-0B-REV03",
+      "created_at": "2026-07-13",
+      "title": "No escribir en celdas fusionadas del RCC",
+      "file": "excel/MEM-001_rcc_merged_cells.md"
+    },
+    {
+      "id": "MEM-002",
+      "domain": "pdf",
+      "profile": "engineering",
+      "error_codes": ["PDF_ANNOTATED_MISSING"],
+      "task_id": "PROT-VALLE-0B-REV03",
+      "created_at": "2026-07-13",
+      "title": "Anotar PDF grandes de forma selectiva",
+      "file": "pdf/MEM-002_pdf_anotacion_selectiva.md"
+    },
+    {
+      "id": "MEM-003",
+      "domain": "engineering",
+      "profile": "engineering",
+      "error_codes": ["PDF_MEMORIA_MISSING", "FILE_MISSING"],
+      "task_id": "PROT-SAX-0F-OMEXOM",
+      "created_at": "2026-07-13",
+      "title": "Nombres ASCII-safe para insumos",
+      "file": "engineering/MEM-003_nombres_ascii_safe.md"
+    },
+    {
+      "id": "MEM-004",
+      "domain": "engineering",
+      "profile": "engineering",
+      "error_codes": ["DELIVERABLE_PATH_INVALID", "FILE_MISSING"],
+      "task_id": "TEMPLATE",
+      "created_at": "2026-07-13",
+      "title": "Rutas absolutas en deliverables.produced",
+      "file": "engineering/MEM-004_rutas_absolutas_deliverables.md"
+    },
+    {
+      "id": "MEM-005",
+      "domain": "webodm",
+      "profile": "engineering",
+      "error_codes": ["GEO_NO_OVERLAP", "GEO_SITE_OUTSIDE_ORTHO"],
+      "task_id": "TEMPLATE",
+      "created_at": "2026-07-13",
+      "title": "Enlazar geo manifest antes de validar ortofoto",
+      "file": "webodm/MEM-005_geo_cross_validate.md"
+    },
+    {
+      "id": "MEM-006",
+      "domain": "engineering",
+      "profile": "engineering",
+      "error_codes": ["FILE_MISSING"],
+      "task_id": "PROT-VALLE-0B-REV03",
+      "created_at": "2026-07-13",
+      "title": "Entregables fuera del repo tras git cleanup",
+      "file": "engineering/MEM-006_entregables_post_cleanup.md"
+    },
+    {
+      "id": "MEM-007",
+      "domain": "excel",
+      "profile": "engineering",
+      "error_codes": ["XLSX_RCC_MISSING"],
+      "task_id": "PROT-SAX-0F-OMEXOM",
+      "created_at": "2026-07-13",
+      "title": "Extraer COM del RCC Sax con regex multilinea",
+      "file": "excel/MEM-007_sax_rcc_regex.md"
+    }
+  ]
+}

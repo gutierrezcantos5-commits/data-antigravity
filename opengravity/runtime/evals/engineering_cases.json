@@ -1,0 +1,69 @@
+{
+  "schema_version": "1",
+  "description": "Casos eval fijos Valle/Sax — expectativas congeladas para pytest",
+  "updated_at": "2026-07-14",
+  "cases": [
+    {
+      "id": "EVL-01",
+      "marker": "ci",
+      "task_id": "PROT-SAX-0F-OMEXOM",
+      "assert": "state_schema_valid"
+    },
+    {
+      "id": "EVL-02",
+      "marker": "ci",
+      "task_id": "PROT-VALLE-0B-REV03",
+      "assert": "state_schema_valid"
+    },
+    {
+      "id": "EVL-03",
+      "marker": "ci",
+      "assert": "memory_lessons_mem001_007"
+    },
+    {
+      "id": "EVL-04",
+      "marker": "ci",
+      "query": "celdas fusionadas excel RCC openpyxl MergedCell",
+      "expect_top_doc_id": "MEM-001"
+    },
+    {
+      "id": "EVL-05",
+      "marker": "ci",
+      "query": "entregable borrado git cleanup FILE_MISSING",
+      "expect_top_doc_id": "MEM-006"
+    },
+    {
+      "id": "EVL-06",
+      "marker": "ci",
+      "assert": "geo_manifests_valid"
+    },
+    {
+      "id": "EVL-07",
+      "marker": "local",
+      "task_id": "PROT-SAX-0F-OMEXOM",
+      "assert": "deliverables_on_disk"
+    },
+    {
+      "id": "EVL-08",
+      "marker": "local",
+      "task_id": "PROT-VALLE-0B-REV03",
+      "assert": "deliverables_on_disk"
+    },
+    {
+      "id": "EVL-09",
+      "marker": "local",
+      "project": "sax",
+      "rcc_glob": "*RCC_Rev05_Propiedad*.xlsx",
+      "expect_com_count": 12,
+      "expect_ok_count": 6,
+      "expect_open_with_comment_min": 6
+    },
+    {
+      "id": "EVL-10",
+      "marker": "local",
+      "project": "valle",
+      "report_glob": "REVISION_Propiedad_Valle*.md",
+      "expect_verdict_substrings": ["REC", "Rev. 0C"]
+    }
+  ]
+}

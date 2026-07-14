@@ -1,0 +1,69 @@
+name: 'OpenGravity Action'
+description: 'Ejecuta OpenGravity como un agente de IA en tus workflows de GitHub'
+author: 'OpenGravity Team'
+inputs:
+  openai-api-key:
+    description: 'Tu OpenAI API Key'
+    required: true
+  prompt:
+    description: 'Instrucciones para el agente'
+    required: false
+  prompt-file:
+    description: 'Ruta al archivo con las instrucciones'
+    required: false
+  output-file:
+    description: 'Ruta donde guardar el resultado'
+    required: false
+    default: 'opengravity-output.md'
+  sandbox:
+    description: 'Modo sandbox (read-only, workspace-write)'
+    required: false
+    default: 'workspace-write'
+
+outputs:
+  final-message:
+    description: 'El mensaje final generado por el agente'
+    value: ${{ steps.opengravity.outputs.final-message }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+      shell: bash
+      working-directory: ${{ github.action_path }}
+
+    - name: Build
+      run: npm run build
+      shell: bash
+      working-directory: ${{ github.action_path }}
+
+    - name: Run OpenGravity
+      id: opengravity
+      run: |
+        ARGS="--exec"
+        if [ ! -z "${{ inputs.prompt }}" ]; then
+          ARGS="$ARGS --prompt \"${{ inputs.prompt }}\""
+        elif [ ! -z "${{ inputs.prompt-file }}" ]; then
+          ARGS="$ARGS --prompt-file ${{ inputs.prompt-file }}"
+        fi
+        
+        if [ ! -z "${{ inputs.output-file }}" ]; then
+          ARGS="$ARGS --output-file ${{ inputs.output-file }}"
+        fi
+
+        RESULT=$(node dist/index.js $ARGS)
+        echo "$RESULT"
+        # Escaping multi-line strings for GitHub Actions outputs
+        echo "final-message<<EOF" >> $GITHUB_OUTPUT
+        echo "$RESULT" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+      shell: bash
+      env:
+        OPENAI_API_KEY: ${{ inputs.openai-api-key }}
+        SANDBOX_MODE: ${{ inputs.sandbox }}

@@ -1,0 +1,20 @@
+{
+  "source": "Export opciones nodo procesamiento WebODM (usuario)",
+  "exported_at": "2026-07-13",
+  "notes": "Catálogo completo disponible en UI del nodo. Presets Antigravity sobrescriben valores clave para ingeniería.",
+  "node_defaults_highlight": {
+    "end-with": "odm_postprocess",
+    "feature-quality": "high",
+    "feature-type": "dspsift",
+    "matcher-type": "flann",
+    "max-concurrency": "16",
+    "orthophoto-resolution": "5",
+    "dem-resolution": "5",
+    "pc-quality": "medium",
+    "sfm-algorithm": "incremental",
+    "optimize-disk-space": "false",
+    "dsm": "false",
+    "dtm": "false"
+  },
+  "antigravity_preset_overrides": "opengravity/runtime/webodm/presets/ortofoto_ingenieria.json"
+}

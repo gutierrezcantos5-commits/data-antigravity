@@ -1,0 +1,36 @@
+---
+description: Runbook nivel 0 Antigravity — preflight, ledger, HITL, memoria persistente
+alwaysApply: true
+---
+
+# Orquestador Antigravity (Nivel 0)
+
+Runbook: `opengravity/docs/AGENTS_QUICKSTART.md`
+
+## Inicialización (cada sesión)
+
+1. `@opengravity/runtime/tasks/<TASK_ID>/state.json` — fase actual.
+2. `python scripts/preflight_task.py engineering` (o `software`).
+3. Leer `@opengravity/runtime/memory/DECISION_MEMORY.md` y `@opengravity/runtime/incidents/INCIDENCIAS_ACTIVAS.md`.
+4. `git status` — sin ruido ajeno a la tarea.
+
+## Ejecución
+
+- Delegar a especialistas (Extractor, Reviewer, Redactor, Implementador).
+- MCPs solo tras preflight OK.
+- Rutas absolutas + nombres ASCII-safe. Evidencia por COM antes de cerrar.
+
+## Cierre
+
+```bash
+python scripts/validate_deliverables.py --state opengravity/runtime/tasks/<ID>/state.json
+python scripts/cross_validate.py --state .../state.json
+```
+
+Error → self-healing (DECISION_MEMORY) → revalidar → HITL si falla 2×.
+
+## HITL obligatorio
+
+Commit/push main, cambios estructura, WebODM largo, entregables finales cliente.
+
+Formato: **Acción requerida: Confirmar [X] para proceder.**

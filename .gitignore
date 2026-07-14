@@ -1,0 +1,98 @@
+# Python virtual environments
+mcp_env/
+.venv/
+venv/
+env/
+*.env
+
+# Backups locales (>100MB, no subir a GitHub)
+OpenGravity_Backup*.zip
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Node / npm
+node_modules/
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temp
+*.log
+*.tmp
+scratch/
+tmp/
+
+# Large binary / compiled DLLs
+*.dll
+*.exe
+*.pdb
+*.so
+
+# IDE
+.vscode/
+.idea/
+
+# Sensitive — no subir a GitHub
+.env
+.env.local
+*.secret
+claude_desktop_config.json
+.cursor/mcp.json
+clave API*.txt
+*API*Rapid*.txt
+config_ingeniero.txt
+antigravity_local.db
+
+# MCP: solo plantillas y documentación en repo
+!.cursor/mcp.json.example
+!.cursor/mcp.optional.json.example
+!.cursor/MCP.md
+!claude_desktop_config.json.example
+!.env.example
+
+# ==========================
+# Carpetas grandes (opcional)
+# ==========================
+# Estas carpetas se mantienen fuera de Git por defecto para evitar ruido y repos enormes.
+# Si necesitas versionar alguna, elimina su línea o añade excepciones específicas.
+Windows-MCP/
+autocad-mcp-server/
+cad-mcp-multicad/
+fermat-mcp/
+goat/
+multicad-mcp-pro/
+opencode/mcp-ai-agent/
+opencode/mcp-sports-nlp/
+opencode/qgisToolMCP/
+opencode/scout-mcp-local/
+opencode/soccer-mcp-server/
+opencode/wyscout-mcp/
+qgis-mcp-pro/
+refact/
+semantic-workbench/
+
+# NOTA: `webodm/` NO se ignora (se usa activamente)
+# Datos de ejecucion WebODM (Docker) — no versionar
+webodm/appmedia/
+webodm/dbdata/
+webodm/.webodm_token
+scripts/webodm.local.json
+webodm/webodm.local.json
+
+# Registro runtime de incidencias (append-only)
+opengravity/runtime/incidents/registry.jsonl
+opengravity/runtime/reports/health_*.md
+opengravity/runtime/memory/chroma_data/
+opengravity/runtime/memory/chroma_index.json
+opengravity/runtime/memory/embeddings_cache.json
